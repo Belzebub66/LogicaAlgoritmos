@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viajes</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <section id="formularioViaje" class="Hsection">
+      <h1 class="title">Planificador de viajes</h1>
+      <h2 class="title">Formulario de viaje</h2>
+      <form id="formViaje">
+        <label for="continente">Continente:</label>
+        <select id="continente" required>
+          <option value="">Seleccione un continente</option>
+          <option value="America">América</option>
+          <option value="Europa">Europa</option>
+          <option value="Asia">Asia</option>
+          <option value="Africa">África</option>
+          <option value="Oceania">Oceanía</option>
+          <option value="Antartida">Antártida</option>
+        </select>
+        <br />
+        <label for="destino">Destino:</label>
+        <input type="text" id="destino" required />
+        <br />
+        <label for="fechaSalida">Fecha de salida:</label>
+        <input type="date" id="fechaSalida" />
+        <br />
+        <label for="fechaRegreso">Fecha de regreso:</label>
+        <input type="date" id="fechaRegreso" />
+        <br />
+        <label for="transporte">Medio de transporte:</label>
+        <select id="transporte" required>
+          <option value="">Seleccione un medio de transporte</option>
+          <option value="Avion">Avión</option>
+          <option value="Barco">Barco</option>
+          <option value="Auto">Auto</option>
+          <option value="Bus">Bus</option>
+          <option value="Tren">Tren</option>
+        </select>
+        <button type="submit" id="agregarViajeBtn">Agregar viaje</button>
+      </form>
+    </section>
+    <section id="viajesAgregados" class="Hsection">
+      <h2 class="title">Itinerario de viajes</h2>
+      <ul id="listaViajes"></ul>
+    </section>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/viajes.js"></script>
+    <script type="module" src="js/logica.js"></script>
+  </body>
+</html>
