@@ -14,6 +14,7 @@ function agregarProducto() {
   }else {
     listaDeCompras.push(producto); // Agregar el producto a la lista
     console.log("Producto agregado: " + producto);
+    mostrarLista(); // Mostrar la lista actualizada
   }
   document.getElementById("producto").value = ""; // Limpiar el input
 }
@@ -27,10 +28,12 @@ function mostrarLista() {
 
 let agregarProductoBtn = document.getElementById("agregarProductoBtn");
 agregarProductoBtn.addEventListener("click", agregarProducto);
-
+/*
 let mostrarListaBtn = document.getElementById("mostrarListaBtn");
 mostrarListaBtn.addEventListener("click", mostrarLista);
-
+*/
+let borrarProductoBtn = document.getElementById("borrarProductoBtn");
+borrarProductoBtn.addEventListener("click", eliminarProducto);
 // Prueba tus funciones
 
 /*
@@ -43,7 +46,22 @@ agregarProducto("Leche");  // Este producto no debe agregarse de nuevo
 function mostrarLista() {
   let listaCompleta = "Lista de compras:\n";
   for (let i = 0; i < listaDeCompras.length; i++) {
-    listaCompleta += "- " + listaDeCompras[i] + "\n";
+    listaCompleta += (i+1) + "._ " + listaDeCompras[i] + "\n";
   }
   document.getElementById("listaProductos").value = listaCompleta; // Mostrar la lista en el listaProductos
+}
+
+function eliminarProducto() {
+  let producto = document.getElementById("borrarProducto").value; // Obtener el valor del input
+  let index = listaDeCompras.indexOf(producto); // Buscar el índice del producto en la lista
+  if (index !== -1) { // Si el producto está en la lista
+    listaDeCompras.splice(index, 1); // Eliminar el producto de la lista
+    console.log("Producto eliminado: " + producto);
+    alert("Producto eliminado: " + producto);
+  } else {
+    console.log("El producto no está en la lista.");
+    alert("El producto no está en la lista.");
+  }
+  document.getElementById("producto").value = ""; // Limpiar el input
+  mostrarLista(); // Mostrar la lista actualizada
 }
