@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda Online</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <section>
+      <h2>Tienda Online</h1>
+      <h2>Productos</h2>
+        <button id="btnFiltrar">Filtrar por costo </button>
+        <input type="number" id="costo" placeholder="Costo a filtrar" />
+        <button id="btnOrdenar">Ordenar Productos Alfabeticamente</button>
+        <button id="btnNombres">Generar un nuevo arreglo</button>
+        <br />
+        <textarea id="productos" rows="10" cols="50"></textarea>
+        <textarea id="nuevoArreglo" rows="10" cols="50"></textarea>
+    </section>
+    <section>
+      <h2>Agregar Producto</h2>
+      <input type="text" id="producto" placeholder="Nombre del producto a añadir o eliminar" />
+      <input type="number" id="precio" placeholder="Precio del producto" />
+      <input type="text" id="categoria" placeholder="Categoria del producto" />
+    </section>
+    <section>
+      <h2>Acciones</h2>
+      <button id="btnAgregar">Agregar Producto</button>
+      <button id="btnAgregarRandom">Agregar un producto aleatorio</button>
+      <button id="btnEliminar">Eliminar Producto</button>
+    </section>
+    <script src="js/script.js"></script>
+  </body>
+</html>
