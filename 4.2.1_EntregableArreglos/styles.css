@@ -1,0 +1,19 @@
+*{
+    align-items: center;
+    background-color: paleturquoise;
+}
+
+#results {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#listaProductos {
+    height: 50vb;
+    width: 50%;
+    resize: vertical;
+    overflow-y: auto;
+    background-color: white;
+    
+}
