@@ -1,0 +1,10 @@
+{
+    "nombre": "Juan",
+    "edad": 8,
+    "personaDuenio": {
+        "nombre": "Pedro",
+        "edad": 30,
+        "telefono": "123456789"
+    },
+    "hermanos": ["Pedro", "Maria"]
+}
